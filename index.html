@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portofolio | Iqbal</title>
+
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="bg-gray-900 text-white dark:bg-white dark:text-black">
+
+    <!-- Navbar -->
+    <header class="sticky top-0 bg-gray-800 dark:bg-gray-100 p-4 z-50 shadow">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-xl font-bold">Porto Iqbal</h1>
+            <nav class="flex items-center">
+                <ul class="flex space-x-4">
+                    <li><a href="#home" class="hover:text-yellow-400">Home</a></li>
+                    <li><a href="#about" class="hover:text-yellow-400">Tentang</a></li>
+                    <li><a href="#projects" class="hover:text-yellow-400">Proyek</a></li>
+                    <li><a href="#contact" class="hover:text-yellow-400">Kontak</a></li>
+                </ul>
+                <button id="toggle-dark" class="ml-4 bg-gray-700 dark:bg-gray-300 hover:bg-gray-600 text-white dark:text-black px-3 py-1 rounded text-sm">
+                    🌙
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section id="home" class="relative h-screen flex flex-col justify-center items-center text-center px-4 overflow-hidden" data-aos="fade-up">
+        <!-- Video Background -->
+        <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover z-0">
+            <source src="assets/Cool black Background.mp4" type="video/mp4" />
+            Browser Anda tidak mendukung video latar belakang.
+        </video>
+
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-black bg-opacity-60 z-10"></div>
+
+        <!-- Hero Content -->
+        <div class="relative z-20">
+            <h2 class="text-4xl md:text-6xl font-bold mb-4 text-white">Halo, Saya <span class="text-yellow-400">Muhammad Wahib Iqbal</span></h2>
+            <p class="text-lg md:text-2xl mb-8 text-blue-200">Saya adalah seorang <span id="typing" class="font-semibold">Web Development Enthusiast</span></p>
+            <a href="#projects" class="bg-yellow-500 hover:bg-yellow-600 text-black px-6 py-2 rounded-full transition">Lihat Proyek</a>
+        </div>
+    </section>
+
+    <!-- Tentang -->
+    <section id="about" class="py-20 px-6 md:px-20 bg-gray-800 dark:bg-gray-200" data-aos="fade-right">
+        <h2 class="text-3xl font-bold mb-6">Tentang Saya</h2>
+        <p class="text-lg">
+            Saya adalah seorang Web Development Enthusiast yang sedang mengembangkan keterampilan di bidang pengembangan web modern. Saya memiliki ketertarikan besar terhadap teknologi web dan saat ini fokus mempelajari HTML, CSS, JavaScript, serta mulai menjajaki
+            framework seperti Tailwind CSS dan React. Sebagai bagian dari perjalanan belajar saya, saya telah membuat beberapa proyek kecil seperti kalkulator berbasis web dan aplikasi To-Do List dengan antarmuka grafis menggunakan Python. Saya memiliki
+            semangat belajar yang tinggi, dan terus berupaya memperluas pengetahuan serta keterampilan untuk dapat berkontribusi dalam pengembangan solusi digital yang fungsional dan user-friendly.
+        </p>
+    </section>
+
+    <!-- Proyek -->
+    <section id="projects" class="py-20 px-6 md:px-20" data-aos="fade-up">
+        <h2 class="text-3xl font-bold mb-12 text-center">Proyek Terbaru</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-gray-700 dark:bg-gray-300 p-6 rounded-xl card-hover">
+                <img src="assets/Kakulatorku.png" alt="Kalkulator" class="rounded-md mb-4" />
+                <h3 class="text-xl font-semibold">Kalkulator</h3>
+                <p class="text-sm mt-2">Aplikasi kalkulator interaktif menggunakan JavaScript.</p>
+            </div>
+            <div class="bg-gray-700 dark:bg-gray-300 p-6 rounded-xl card-hover">
+                <img src="assets/todolist.png" alt="To Do List GUI" class="rounded-md mb-4" />
+                <h3 class="text-xl font-semibold">To-Do List</h3>
+                <p class="text-sm mt-2">To-Do List berbasis desktop dengan tampilan intuitif.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontak -->
+    <section id="contact" class="py-20 px-6 md:px-20 bg-gray-800 dark:bg-gray-200" data-aos="fade-left">
+        <h2 class="text-3xl font-bold mb-6">Hubungi Saya</h2>
+        <form action="https://formsubmit.co/wahibiqbal16@gmail.com" method="POST" class="space-y-4 max-w-lg">
+            <!-- FormSubmit options -->
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="terkirim.html">
+
+            <input type="text" name="name" placeholder="Nama Anda" required class="w-full p-2 rounded text-black">
+            <input type="email" name="email" placeholder="Email Anda" required class="w-full p-2 rounded text-black">
+            <textarea name="message" rows="4" placeholder="Pesan Anda" required class="w-full p-2 rounded text-black"></textarea>
+            <button type="submit" class="bg-yellow-500 hover:bg-yellow-600 text-black font-bold px-6 py-2 rounded">Kirim</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-6 bg-gray-900 dark:bg-gray-100 text-gray-500 dark:text-gray-800 text-sm">
+        &copy; 2025 Muhammad Wahib Iqbal Marzuq. All rights reserved.
+    </footer>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <!-- Dark Mode Toggle with LocalStorage -->
+    <script>
+        const html = document.documentElement;
+        const toggleBtn = document.getElementById('toggle-dark');
+
+        // Load preference on page load
+        if (localStorage.getItem('theme') === 'dark') {
+            html.classList.add('dark');
+        }
+
+        toggleBtn.addEventListener('click', () => {
+            html.classList.toggle('dark');
+            localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+        });
+    </script>
+
+    <!-- Custom JS -->
+    <script defer src="js/main.js"></script>
+</body>
+
+</html>
